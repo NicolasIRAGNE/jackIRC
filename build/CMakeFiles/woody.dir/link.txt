@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/woody.dir/srcs/main.c.o  -o woody 

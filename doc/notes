@@ -1,0 +1,8 @@
+THINGS TO DO:
+
+- On startup:
+      Command: NICK
+   Parameters: <nickname> [ <hopcount> ]
+
+      Command: USER
+   Parameters: <username> <hostname> <servername> <realname>

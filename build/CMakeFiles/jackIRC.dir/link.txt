@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/jackIRC.dir/srcs/main.c.o  -o jackIRC -lpthread 

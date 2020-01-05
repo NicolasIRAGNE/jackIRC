@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../includes/jackirc.h
+sys/socket.h
+-
+sys/types.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+netdb.h
+-
+pthread.h
+-
+
+/home/ahab/jackIRC/srcs/main.c
+jackirc.h
+/home/ahab/jackIRC/srcs/jackirc.h
+

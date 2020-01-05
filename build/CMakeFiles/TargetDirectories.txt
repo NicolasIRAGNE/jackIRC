@@ -1,0 +1,3 @@
+/home/ahab/jackIRC/build/CMakeFiles/rebuild_cache.dir
+/home/ahab/jackIRC/build/CMakeFiles/jackIRC.dir
+/home/ahab/jackIRC/build/CMakeFiles/edit_cache.dir
