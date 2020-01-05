@@ -1,12 +1,13 @@
 #include "jackirc.h"
 
-#define DEFAULT_NICK "test_client"
-#define DEFAULT_USER "test_client jackIRC jackIRC :alexandre benalla"
+#define DEFAULT_NICK "jackIRC"
+#define DEFAULT_USER "jackIRC jackIRC jackIRC :alexandre benalla"
 
 #define DEFAULT_SERVER "irc.freenode.net"
 #define DEFAULT_PORT 6667
 
 char* channel;
+int running = 1;
 
 void	*open_listen_thread(void* fd)
 {
@@ -14,12 +15,19 @@ void	*open_listen_thread(void* fd)
 	int rd;
 	int* tmp = (int*)fd;
 
-	while (rd = recv(*tmp, buffer, BUFSIZ, 0))
+	while ((rd = recv(*tmp, buffer, BUFSIZ, 0)))
 	{
 		buffer[rd] = 0;
 		printf("%s", buffer);
 	}
 	return NULL;
+}
+
+int		handle_command(char* command, char* buffer)
+{
+	size_t len = strlen(command);
+	memcpy(buffer, command + 1, len);
+	return (len - 1);
 }
 
 void	*open_send_thread(void* fd)
@@ -40,14 +48,18 @@ void	*open_send_thread(void* fd)
 	printf("trying to send %s\n", buffer);
 	send(*tmp, buffer, rd, 0);
 
-	while (1)
+	while (rd = read(0, msg, BUFSIZ))
 	{
-		rd = read(0, msg, BUFSIZ);
 		msg[rd] = 0;
-		rd = sprintf(buffer, "PRIVMSG #%s :%s", channel, msg);
+		if (msg[0] == '/')
+			rd = handle_command(msg, buffer);
+		else
+			rd = sprintf(buffer, "PRIVMSG #%s :%s", channel, msg);
+		
 		send(*tmp, buffer, rd, 0);
 
 	}
+	running = 0;
 	return NULL;
 }
 
@@ -92,7 +104,6 @@ int main(int ac, char** av)
 
 	pthread_create(&listen_thread, NULL, open_listen_thread, &listenfd);  
 	pthread_create(&send_thread, NULL, open_send_thread, &listenfd);  
-    pthread_join(listen_thread, NULL);
     pthread_join(send_thread, NULL);
 
 
