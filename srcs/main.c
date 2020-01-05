@@ -3,6 +3,7 @@
 #define DEFAULT_NICK "jackIRC"
 #define DEFAULT_USER "jackIRC jackIRC jackIRC :alexandre benalla"
 
+// #define DEFAULT_SERVER "irc.root-me.org"
 #define DEFAULT_SERVER "irc.freenode.net"
 #define DEFAULT_PORT 6667
 
@@ -45,6 +46,7 @@ void	*open_send_thread(void* fd)
 	printf("trying to send %s\n", buffer);
 	send(*tmp, buffer, rd, 0);
 	rd = sprintf(buffer, "join #%s\n", channel);
+	sleep(4);
 	printf("trying to send %s\n", buffer);
 	send(*tmp, buffer, rd, 0);
 

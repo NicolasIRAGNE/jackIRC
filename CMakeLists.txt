@@ -15,3 +15,4 @@ INCLUDE_DIRECTORIES(includes)
 
 add_executable(jackIRC ${SOURCES})
 target_link_libraries (jackIRC ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(jackIRC m)
