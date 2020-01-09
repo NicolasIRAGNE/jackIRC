@@ -123,6 +123,33 @@ jackIRC/fast:
 	$(MAKE) -f CMakeFiles/jackIRC.dir/build.make CMakeFiles/jackIRC.dir/build
 .PHONY : jackIRC/fast
 
+srcs/handle_message.o: srcs/handle_message.c.o
+
+.PHONY : srcs/handle_message.o
+
+# target to build an object file
+srcs/handle_message.c.o:
+	$(MAKE) -f CMakeFiles/jackIRC.dir/build.make CMakeFiles/jackIRC.dir/srcs/handle_message.c.o
+.PHONY : srcs/handle_message.c.o
+
+srcs/handle_message.i: srcs/handle_message.c.i
+
+.PHONY : srcs/handle_message.i
+
+# target to preprocess a source file
+srcs/handle_message.c.i:
+	$(MAKE) -f CMakeFiles/jackIRC.dir/build.make CMakeFiles/jackIRC.dir/srcs/handle_message.c.i
+.PHONY : srcs/handle_message.c.i
+
+srcs/handle_message.s: srcs/handle_message.c.s
+
+.PHONY : srcs/handle_message.s
+
+# target to generate assembly for a file
+srcs/handle_message.c.s:
+	$(MAKE) -f CMakeFiles/jackIRC.dir/build.make CMakeFiles/jackIRC.dir/srcs/handle_message.c.s
+.PHONY : srcs/handle_message.c.s
+
 srcs/main.o: srcs/main.c.o
 
 .PHONY : srcs/main.o
@@ -150,6 +177,33 @@ srcs/main.c.s:
 	$(MAKE) -f CMakeFiles/jackIRC.dir/build.make CMakeFiles/jackIRC.dir/srcs/main.c.s
 .PHONY : srcs/main.c.s
 
+srcs/tools.o: srcs/tools.c.o
+
+.PHONY : srcs/tools.o
+
+# target to build an object file
+srcs/tools.c.o:
+	$(MAKE) -f CMakeFiles/jackIRC.dir/build.make CMakeFiles/jackIRC.dir/srcs/tools.c.o
+.PHONY : srcs/tools.c.o
+
+srcs/tools.i: srcs/tools.c.i
+
+.PHONY : srcs/tools.i
+
+# target to preprocess a source file
+srcs/tools.c.i:
+	$(MAKE) -f CMakeFiles/jackIRC.dir/build.make CMakeFiles/jackIRC.dir/srcs/tools.c.i
+.PHONY : srcs/tools.c.i
+
+srcs/tools.s: srcs/tools.c.s
+
+.PHONY : srcs/tools.s
+
+# target to generate assembly for a file
+srcs/tools.c.s:
+	$(MAKE) -f CMakeFiles/jackIRC.dir/build.make CMakeFiles/jackIRC.dir/srcs/tools.c.s
+.PHONY : srcs/tools.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +213,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... jackIRC"
 	@echo "... edit_cache"
+	@echo "... srcs/handle_message.o"
+	@echo "... srcs/handle_message.i"
+	@echo "... srcs/handle_message.s"
 	@echo "... srcs/main.o"
 	@echo "... srcs/main.i"
 	@echo "... srcs/main.s"
+	@echo "... srcs/tools.o"
+	@echo "... srcs/tools.i"
+	@echo "... srcs/tools.s"
 .PHONY : help
 
 

@@ -15,11 +15,23 @@ void	*open_listen_thread(void* fd)
 	char buffer[BUFSIZ];
 	int rd;
 	int* tmp = (int*)fd;
+	char** resp;
 
 	while ((rd = recv(*tmp, buffer, BUFSIZ, 0)))
 	{
 		buffer[rd] = 0;
-		printf("%s", buffer);
+		resp = strsplit_ptr(buffer, ' ', rd);
+		if (resp[1])
+		{
+			if (!strncmp(resp[0], "PING", 4))
+			{
+				handle_ping(*tmp, resp[1]);
+			}
+			else if (!strncmp(resp[1], "PRIVMSG", 7))
+			{
+				handle_message(resp);
+			}
+		}
 	}
 	return NULL;
 }

@@ -1,1 +1,1 @@
-/usr/bin/cc    CMakeFiles/jackIRC.dir/srcs/main.c.o  -o jackIRC -lpthread -lm 
+/usr/bin/cc -g   CMakeFiles/jackIRC.dir/srcs/main.c.o CMakeFiles/jackIRC.dir/srcs/tools.c.o CMakeFiles/jackIRC.dir/srcs/handle_message.c.o  -o jackIRC -lpthread -lcurses /usr/lib/x86_64-linux-gnu/libform.so -lm 

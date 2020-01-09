@@ -26,6 +26,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.13/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.13/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.13/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-3.13/Modules/FindCurses.cmake"
   "/usr/share/cmake-3.13/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.13/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.13/Modules/FindThreads.cmake"

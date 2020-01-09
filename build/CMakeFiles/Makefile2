@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/ahab/jackIRC/build
 CMakeFiles/jackIRC.dir/all:
 	$(MAKE) -f CMakeFiles/jackIRC.dir/build.make CMakeFiles/jackIRC.dir/depend
 	$(MAKE) -f CMakeFiles/jackIRC.dir/build.make CMakeFiles/jackIRC.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ahab/jackIRC/build/CMakeFiles --progress-num=1,2 "Built target jackIRC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ahab/jackIRC/build/CMakeFiles --progress-num=1,2,3,4 "Built target jackIRC"
 .PHONY : CMakeFiles/jackIRC.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/jackIRC.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/jackIRC.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahab/jackIRC/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahab/jackIRC/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/jackIRC.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahab/jackIRC/build/CMakeFiles 0
 .PHONY : CMakeFiles/jackIRC.dir/rule

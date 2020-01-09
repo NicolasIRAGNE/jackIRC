@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/jackIRC.dir/srcs/main.c.o"
+  "CMakeFiles/jackIRC.dir/srcs/tools.c.o"
+  "CMakeFiles/jackIRC.dir/srcs/handle_message.c.o"
   "jackIRC.pdb"
   "jackIRC"
 )

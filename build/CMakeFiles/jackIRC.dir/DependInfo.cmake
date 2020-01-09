@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/ahab/jackIRC/srcs/handle_message.c" "/home/ahab/jackIRC/build/CMakeFiles/jackIRC.dir/srcs/handle_message.c.o"
   "/home/ahab/jackIRC/srcs/main.c" "/home/ahab/jackIRC/build/CMakeFiles/jackIRC.dir/srcs/main.c.o"
+  "/home/ahab/jackIRC/srcs/tools.c" "/home/ahab/jackIRC/build/CMakeFiles/jackIRC.dir/srcs/tools.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

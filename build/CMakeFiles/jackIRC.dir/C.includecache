@@ -30,6 +30,10 @@ pthread.h
 math.h
 -
 
+/home/ahab/jackIRC/srcs/handle_message.c
+jackirc.h
+/home/ahab/jackIRC/srcs/jackirc.h
+
 /home/ahab/jackIRC/srcs/main.c
 jackirc.h
 /home/ahab/jackIRC/srcs/jackirc.h
